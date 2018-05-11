@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscribers
+from .models import Subscriber
 
 class SubscriberAdmin(admin.ModelAdmin):
     list_display = ['id','name','email']
@@ -7,6 +7,6 @@ class SubscriberAdmin(admin.ModelAdmin):
     search_fields = ['name', 'email']
 
     class Meta:
-        model = Subscribers
+        model = Subscriber
 
-admin.site.register(Subscribers, SubscriberAdmin)
+admin.site.register(Subscriber, SubscriberAdmin)
