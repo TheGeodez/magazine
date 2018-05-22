@@ -14,6 +14,11 @@ html, body {
     font-family: 'Roboto', sans-serif;
     background-color: #edeef0;
 }
+
+.navbar {
+    margin-bottom: 0;
+}
+
 .general-container {
     background-image: url("img/bg_img.jpg");
     height: 100%;
@@ -41,7 +46,7 @@ html, body {
     background-color: white;
     position: relative;
     border: 1px solid lightgray;
-    padding: 5px;
+    padding: 10px 0 10px 0;
     text-align: center;
 
 }
@@ -53,4 +58,35 @@ html, body {
     position: absolute;
     bottom: 10px;
     left: 40px;
+}
+
+.footerr{
+    margin-top: -180px;
+    background-color: white;
+    height: 180px;
+    position: relative;
+    clear: both;
+
+}
+
+.discount-container{
+    position: absolute;
+    top: 30%;
+    background: greenyellow;
+    width: 30%;
+    color: white;
+    font-weight: 700;
+    padding: 3px;
+}
+
+.section-delivery{
+    height: 300px;
+    background-color: darkgreen ;
+    text-align: center;
+    color: white;
+}
+
+.wrapper-content{
+    overflow: auto;
+    padding-bottom: 180px;
 }
