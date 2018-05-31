@@ -49,7 +49,8 @@
 </div>
 </div>
                 <div>
-                    <form id="form_byuing" class="form-inline">
+                    <form id="form_byuing" class="form-inline" action="{% url 'cart_adding' %}">
+                        {% csrf_token %}
                         <div class="form-group">
                         <input type="number" class="form-control marrrgin" name="number" id="number">
                         </div>

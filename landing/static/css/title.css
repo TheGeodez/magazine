@@ -133,3 +133,11 @@ html, body {
     z-index: 10;
     padding: 10px;
 }
+
+.btn{
+    font-size: 1rem !important;
+}
+
+.form-control{
+    font-size: 1rem !important;
+}
