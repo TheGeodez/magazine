@@ -141,3 +141,6 @@ html, body {
 .form-control{
     font-size: 1rem !important;
 }
+.navbar .collapse .form-inline .dropdown-menu{
+    top: 45px;
+}
