@@ -12,29 +12,66 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
-        </ul>
-          <ul class="nav navbar-nav">
-          <li>
-              <div class="basket-container">
-            <a href="">Корзина <span id="basket_total_nbr">
-                {% if products_total_nbr %}
-                    ({{ products_total_nbr }})
-                {% else %}
-                    (0)
-                {% endif %}
-            </span></a>
-              <div class="basket-items">
-                  <ul class="">
-                    {% for product_in_cart in products_in_cart %}
-                      <li>{{ product_in_cart.product.name }}  {{ product_in_cart.number }} шт. по {{ product_in_cart.price_per_item }} usd
-                        <a class="delete-item" href="" data-product_id="{{ product_in_cart.id }}">x</a></li>
-                      {% endfor %}
-                  </ul>
-                  </div>
-              </div>
-          </li>
+{#          <li class="nav-item dropdown">#}
+{#            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#              Корзина#}
+{#                <span id="basket_total_nbr">#}
+{#                  {% if products_total_nbr %}#}
+{#                    ({{ products_total_nbr }})#}
+{#                      {% else %}#}
+{#                    (0)#}
+{#                  {% endif %}#}
+{#                </span>#}
+{#            </a>#}
+{#            <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+{#                {% for product_in_cart in products_in_cart %}#}
+{#                  <a class="dropdown-item">{{ product_in_cart.product.name }}  {{ product_in_cart.number }} шт. по {{ product_in_cart.price_per_item }} usd#}
+{#                    <span class="delete-item" href="" data-product_id="{{ product_in_cart.id }}">x</span></a>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#          </li>#}
+{#          <li class="nav-item">#}
+{#              <div class="basket-container">#}
+{#                <a href="">Корзина#}
+{#                    <span id="basket_total_nbr">#}
+{#                        {% if products_total_nbr %}#}
+{#                            ({{ products_total_nbr }})#}
+{#                        {% else %}#}
+{#                            (0)#}
+{#                        {% endif %}#}
+{#                    </span>#}
+{#                </a>#}
+{#              <div class="basket-items">#}
+{#                  <ul class="">#}
+{#                    {% for product_in_cart in products_in_cart %}#}
+{#                      <li>{{ product_in_cart.product.name }}  {{ product_in_cart.number }} шт. по {{ product_in_cart.price_per_item }} usd#}
+{#                        <a class="delete-item" href="" data-product_id="{{ product_in_cart.id }}">x</a></li>#}
+{#                      {% endfor %}#}
+{#                  </ul>#}
+{#                  </div>#}
+{#              </div>#}
+{#          </li>#}
         </ul>
         <form class="form-inline mt-2 mt-md-0">
+            <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Корзина
+                <span id="basket_total_nbr">
+                  {% if products_total_nbr %}
+                    ({{ products_total_nbr }})
+                      {% else %}
+                    (0)
+                  {% endif %}
+                </span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item">111111111</a>
+                {% for product_in_cart in products_in_cart %}
+                  <a class="dropdown-item">{{ product_in_cart.product.name }}  {{ product_in_cart.number }} шт. по {{ product_in_cart.price_per_item }} usd
+                    <span class="delete-item" href="" data-product_id="{{ product_in_cart.id }}">x</span></a>
+                {% endfor %}
+            </div>
+          </div>
           <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
         </form>
